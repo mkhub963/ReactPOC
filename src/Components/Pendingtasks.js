@@ -21,22 +21,23 @@ const Pendingtasks = ()=>{
         <div className="bg-white px-4 py-2">
           <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
             <Tab eventKey="home" title="CASH">
-              <Carousel activeIndex={index} onSelect={handleSelect}>
-                {pendingTasksData[0]?.tasks?.map((task, idx) => (
-                  <Carousel.Item key={idx}>
-                    <div className="flex justify-between p-4 mb-4 bg-white rounded-lg border border-blue-800">
-                      <div className="text-left">
-                        <div className="text-2xl font-bold">{task.count}</div>
-                        <div className="text-sm text-gray-400">{task.type}</div>
-                        <div className="text-blue-500 mt-2">{task.details}</div>
-                      </div>
-                    </div>
-                    <Carousel.Caption className="text-gray-500">
-                      Last Updated {pendingTasksData[0].lastUpdated}
-                    </Carousel.Caption>
-                  </Carousel.Item>
-                ))}
-              </Carousel>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+      <div className="flex justify-between p-[12px] mb-[80px] bg-white  rounded-lg border-blue-800">
+      {pendingTasksData[0]?.tasks?.map((task, idx) => (
+        <div key={idx} className="text-left">
+          <div className="text-2xl font-bold">{task.count}</div>
+          <div className="text-sm text-gray-400 whitespace-nowrap">{task.type}</div>
+          <div className="text-blue-500 mt-2">{task.details}</div>
+        </div>
+      ))}
+    </div>
+    <Carousel.Caption className="text-gray-500">
+      Last Updated {pendingTasksData[0]?.lastUpdated}
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+
             </Tab>
           </Tabs>
         </div>
