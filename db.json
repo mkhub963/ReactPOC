@@ -88,6 +88,15 @@
         }
       ]
     }
+  ],
+  "navBar":[
+    {
+      "empId":"SITUSR01",
+      "name":"Straight2Bank",
+      "groupId": "KRSITEE1",
+      "isLoggedIn": "true",
+      "message":"welcome"
+    }
   ]
   }
   

@@ -8,7 +8,8 @@ export const DataProvider = ({ children }) => {
     quickNavigationData: [],
     paymentPendingData: [],
     pendingTasksData: [],
-    priorityMessageData: []
+    priorityMessageData: [],
+    navBarData: []
   });
 
   useEffect(() => {
@@ -16,11 +17,13 @@ export const DataProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get('http://localhost:3000/data');
+        console.log(response);
         setData({
           quickNavigationData: response.data.quickNavigation,
           paymentPendingData: response.data.paymentPending,
           pendingTasksData: response.data.pendingTasks,
-          priorityMessageData: response.data.priorityMessage
+          priorityMessageData: response.data.priorityMessage,
+          navBarData: response.data.navBar
         });
       } catch (error) {
         console.error('Error fetching data:', error);

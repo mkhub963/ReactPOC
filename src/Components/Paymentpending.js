@@ -3,6 +3,7 @@ import { DataContext } from './DataContext';
 
 const Paymentpending = () => {
   const { paymentPendingData } = useContext(DataContext);
+  // console.log(paymentPendingData);
 
   return (
     <div className="border border-gray-300">

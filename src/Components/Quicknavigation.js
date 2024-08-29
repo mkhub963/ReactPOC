@@ -10,7 +10,7 @@ const Quicknavigation = ()=> {
         <div className="bg-blue-800 text-white px-4 py-2">QUICK NAVIGATION</div>
         <div className="bg-white px-4 py-2">
           <ul className="list-none p-0 m-0">
-            {quickNavigationData.map((item) => (
+            {quickNavigationData?.map((item) => (
               <li key={item.id} className="flex justify-between items-start gap-2 py-2">
                 <div>
                   <div className="font-bold">{item.title}</div>
