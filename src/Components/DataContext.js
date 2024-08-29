@@ -1,5 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import Layout from './Layout';
+import {Home }from './Home';
 
 export const DataContext = createContext();
 
@@ -12,12 +14,13 @@ export const DataProvider = ({ children }) => {
     navBarData: []
   });
 
+  const [serverError, setServerError] = useState(false);
+
   useEffect(() => {
     // Replace with your API endpoint
     const fetchData = async () => {
       try {
         const response = await axios.get('http://localhost:3000/data');
-        console.log(response);
         setData({
           quickNavigationData: response.data.quickNavigation,
           paymentPendingData: response.data.paymentPending,
@@ -25,7 +28,9 @@ export const DataProvider = ({ children }) => {
           priorityMessageData: response.data.priorityMessage,
           navBarData: response.data.navBar
         });
+        setServerError(false);
       } catch (error) {
+        setServerError(true);
         console.error('Error fetching data:', error);
       }
     };
@@ -35,7 +40,9 @@ export const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider value={data}>
-      {children}
+      <Layout>
+        {serverError ? <Home /> : children}
+      </Layout>
     </DataContext.Provider>
   );
 };
