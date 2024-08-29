@@ -1,5 +1,15 @@
 # Getting Started with Create React App
+
+
+The data is getting rendered based on the api data. so start dumy server by entering the command : json-server --watch db.json
+
+<img width="943" alt="Screenshot 2024-08-07 162504" src="https://github.com/user-attachments/assets/0768cb6c-22c9-46fc-812e-0a37fa1f7a81">
+
+after start:
+
 <img width="943" alt="Screenshot 2024-08-07 162504" src="https://github.com/user-attachments/assets/9b7667e8-724c-418d-818a-feb6ce1417e9">
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
