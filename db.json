@@ -1,0 +1,103 @@
+{
+  "data":{
+    "quickNavigation": [
+    {
+      "id": 1,
+      "title": "Create Payments",
+      "description": "Item Content 1"
+    },
+    {
+      "id": 2,
+      "title": "Create Payee",
+      "description": "Item Content 2"
+    },
+    {
+      "id": 3,
+      "title": "View Account Balance",
+      "description": "Item Content 3"
+    },
+    {
+      "id": 4,
+      "title": "Manage Reports",
+      "description": "Item Content 4"
+    }
+  ],
+  "paymentPending": [
+    {
+      "id": 1,
+      "title": "PAYMENT-PENDING APPROVAL",
+      "body": "QO022706 | Cut - off time 2 hrs from now KRW 701"
+    }
+  ],
+  "pendingTasks": [
+    {
+      "id": 1,
+      "title": "Pending Tasks Overview",
+      "tasks": [
+        {
+          "type": "Pending Send to Bank",
+          "count": 687,
+          "details": "687 Payments"
+        },
+        {
+          "type": "Pending Repair",
+          "count": 687,
+          "details": "5 Payments, 3 Payees"
+        },
+        {
+          "type": "Pending Authorization",
+          "count": 830,
+          "details": "556 Payments, 11 Payment Batches, 263 Payees"
+        }
+      ],
+      "lastUpdated": "17/07/2024 04:09:44 PM"
+    }
+  ],
+  "priorityMessage": [
+    {
+      "id": 1,
+      "title": "Bill Payments Report - Korea_Bill",
+      "linkText": "All message"
+    },
+    {
+      "id": 2,
+      "title": "PAYMENTS IN LAST 7 DAYS (MY VIEW)",
+      "tabs": [
+        {
+          "eventKey": "home",
+          "title": "CLIENT WORKFLOW",
+          "content": "Tab content for Home"
+        },
+        {
+          "eventKey": "profile",
+          "title": "BANK WORKFLOW",
+          "content": {
+            "processedByBank": {
+              "count": 25,
+              "description": "Processed by Bank",
+              "color": "bg-green-500",
+              "heightPercentage": 62.5
+            },
+            "rejectedByBank": {
+              "count": 14,
+              "description": "Rejected by Bank",
+              "color": "bg-blue-500",
+              "heightPercentage": 35
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "navBar":[
+    {
+      "empId":"SITUSR01",
+      "name":"Straight2Bank",
+      "groupId": "KRSITEE1",
+      "isLoggedIn": "true",
+      "message":"welcome"
+    }
+  ]
+  }
+  
+}
